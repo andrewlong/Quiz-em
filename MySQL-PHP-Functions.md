@@ -8,6 +8,7 @@ The page processes through an html input array $input and dynamnically generates
 This is all written with the MySQLi php interface
 			
 Info on expected SQL table schemas
+----------------------------------
 Each table needs to have a autoincrement identiy column this colum must be name "id", other than that any other column types should work. The posted values are escaped for security but there is no other checking of the data done. 
 Example table schema
 
@@ -20,6 +21,7 @@ Example table schema
 	);
 					
 Setting up the form
+-----------------------
 In the test template you can change the input[] array is necessary and you can run multiple getdata($table); different information. 
 The input[key] array key needs to be the the column name 
 $table needs to be set to the table you are using to store the information.
