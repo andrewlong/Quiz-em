@@ -1,4 +1,6 @@
 SQL insert/update framework
+===========================
+
 The staff_type page is a quick exampe way to handle inserting rows in a MySQL database. Currently there is no mechanism for deleting data but that could be added, right now my design is planned around the fact I don't want users to delete info rather they are inactivate it.
 
 The page processes through an html input array $input and dynamnically generates UPDATE and INSERT statements using the function `process_post_data`. The page also includes a search mechanism and editing interface that is access from the search results by clicking on the row.
