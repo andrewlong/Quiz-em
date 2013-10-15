@@ -1,4 +1,4 @@
-<?
+<?php
 //check browser
 if(eregi("chrome", $_SERVER['HTTP_USER_AGENT']) || eregi("firefox", $_SERVER['HTTP_USER_AGENT']))
 {
@@ -33,6 +33,7 @@ if(eregi("chrome", $_SERVER['HTTP_USER_AGENT']) || eregi("firefox", $_SERVER['HT
  </div> <!-- /container -->
  <script>
 $("#year").on("change", function() {
+	$( "#quizes" ).html( "<table><tr><td>Loading...</td></tr></table>");
     $.ajax({
         url: "include/get_user_quizes.php",
         data: {year:$("#getquiz option:selected").val()},

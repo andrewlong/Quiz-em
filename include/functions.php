@@ -1,11 +1,11 @@
-<?
+<?php
 
 function db_connect()
 {
 	$db='quiz';
 	$mysql_host = "localhost";
-	$mysql_user = "username";
-	$mysql_password = "password";
+	$mysql_user = "quiz";
+	$mysql_password = "none";
 	
 	$mysqli = mysqli_connect($mysql_host,$mysql_user,$mysql_password, $db);
 	if (mysqli_connect_errno($mysqli)) {
@@ -149,14 +149,14 @@ function select_input($name,$options,$default="",$extra="",$add_all,$rows=false)
 		<div class="form-group">
 		<label for="category" class="col-md-6 control-label"><?php print $label; ?></label>
 		<div class="col-md-6">
-		<?
+		<?php
 	}
 	else
 	{ ?>
 		<div class="form-group">
 		<label for="category" class="col-md-2 control-label"><?php print $label; ?></label>
 		<div class="col-md-3">
-		<?
+		<?php
 	} ?>
 		<select name="<?php print $name; ?>" id="category" class="form-control" <?php print $extra; ?>>
 	<?php	

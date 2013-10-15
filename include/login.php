@@ -19,7 +19,7 @@
     <div class="container">
 
       <form class="form-signin" method="post">
-      <? if (isset($_GET['auth'])) {print $_GET['auth']; }?>
+      <?php if (isset($auth)) {print $auth; }?>
         <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
         <input type="password" name="password" class="form-control" placeholder="Password">
