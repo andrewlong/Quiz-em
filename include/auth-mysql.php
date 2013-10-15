@@ -14,7 +14,8 @@ if(isset($_POST['submit'])) //submitted login
    
    if(mysqli_num_rows($mysql) < 1)
    {
-   	header("location:?auth=Invalid+User/Password");	//send to login form
+   	$auth="Invalid User/Password";
+    include 'include/login.php';	//send to login form
    	die();
    } // That snippet checked to see if the number of rows the MySQL query was less than 1, so if it couldn't find a row, the password is incorrect or the user doesn't exist!
    $_SESSION['loggedin'] = "YES"; // Set it so the user is logged in!

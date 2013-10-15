@@ -4,8 +4,8 @@ function db_connect()
 {
 	$db='quiz';
 	$mysql_host = "localhost";
-	$mysql_user = "quiz";
-	$mysql_password = "none";
+	$mysql_user = "username";
+	$mysql_password = "password";
 	
 	$mysqli = mysqli_connect($mysql_host,$mysql_user,$mysql_password, $db);
 	if (mysqli_connect_errno($mysqli)) {

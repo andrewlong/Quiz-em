@@ -1,4 +1,12 @@
 <?php
+		//set these to yours
+		 // Active Directory server
+	    $ldap_host = "ldapserver";
+	 
+	    // Active Directory DN
+	    $ldap_dn = "DC=XXX";
+
+
 if($_SESSION['loggedin']) 
 {   //logged in
 }
@@ -29,17 +37,8 @@ else
 		$user = $_POST['username'];
 	   $password = $_POST['password'];
 
-		 // Active Directory server
-	    $ldap_host = "10.60.1.201";
+
 	 
-	    // Active Directory DN
-	    $ldap_dn = "DC=crm,DC=crmcinc,DC=org";
-	 
-	    // Active Directory user group
-	    $ldap_user_group = "CN=IS";
-	 
-	    // Active Directory manager group
-	    $ldap_manager_group = "NURSES";
 	 
 	    // connect to active directory
 	   $ldap = ldap_connect($ldap_host) or die("Could not connect to $ldap_host");

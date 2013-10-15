@@ -1,15 +1,17 @@
 <?php
 /*
-	This part below is an example authenication system that uses MySQL, you can use whatever system you want just so long as you 
+	include/auth-mysql.php is an example authenication system that uses MySQL, you can use whatever system you want just so long as you 
 	set $_SESSION['user_name'], because it is an example we don't do any fancy md5 encyption of passwords and the such.
 	
-
-	I also have a ldap authenication system in the works too which I'll be putting out later.
+	
+	#LDAP authenication
+	Simply change to include/auth-mysql.php to include/auth-ldap.php
+	and then configure include/auth-ldap.php; Set $ldap_host and $ldap_dn at top
 
 */
 session_start(); // This starts the session which is like a cookie, but it isn't saved on your hdd and is much more secure.
 
-include ("include/auth-ldap.php");
+include ("include/auth-mysql.php");
 
 //get user id and user rights
 if (!isset($_SESSION['user_id']))
