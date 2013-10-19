@@ -6,7 +6,7 @@
 	    // Active Directory DN
 	    $ldap_dn = "DC=XXX";
 
-
+$use_ldap = true; //setup to disable password field when entering new users
 if($_SESSION['loggedin']) 
 {   //logged in
 }

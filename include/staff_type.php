@@ -10,7 +10,7 @@ if (!isset($_POST['search']))
 	if (isset($_POST['input']))
 	{
 		$return = process_post_data($table, $_POST['input']);
-		print alert('sucess',$return['msg']);
+		print alert('success',$return['msg']);
 	}
 $input= get_data($table);
 print "<form class='form-horizontal' method='post' action='" . get_page_url() . "?page={$_GET['page']}'>\n";

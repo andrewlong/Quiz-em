@@ -113,7 +113,7 @@ function text_input($name,$value,$type,$size,$extra="")
     print "<div class=\"form-group\">\n";
     print "\t\t<label class=\"col-md-2 control-label\" for=\"input$name\">$label</label>\n";
     print "\t\t<div class=\"col-md-4\">\n";
-    print "\t\t\t\t<input type=\"$type\" class=\"$class\" id=\"input$name\" name=\"$name\" placeholder=\"$label\" $extra value=\"$value\">\n";
+    print "\t\t\t\t<input type=\"$type\" class=\"$class\" id=\"input$name\" name=\"$name\" placeholder=\"$label\" value=\"$value\" $extra>\n";
     print "\t\t</div>\n\t</div>\n";
 }
 

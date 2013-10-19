@@ -30,7 +30,14 @@ if (!isset($_POST['search']))
 		{
 			$return = process_post_data($table, $_POST['input']);
 			process_staff_type_data('quiz_staff_type',$_POST['type'],$return['id'],'quiz_id');
-			header("Location: " . get_base_url() . "/quiz/?page=quiz_questions&id={$return['id']}");
+			$url =get_base_url() . "/quiz/?page=quiz_questions&id={$return['id']}";
+			header("Location: $url");
+			//this is for IIS, need to rewrite so we don't have to do this nasty thing.  Maybe post to quiz_questions instead of posting to self.
+			echo "Redirecting";
+			echo "<META http-equiv='refresh' content='0;URL=$url'>";
+			exit;
+			
+			
 		}
 	$url = '';
 	if (isset($_GET['id']))
@@ -48,7 +55,7 @@ print "<form class='form-horizontal' method='post' action='" . get_page_url() . 
 			<h4>Quiz</h4>
 		</div>
 	</div>
-<?
+<?php
 
 
 $data= get_data($table);

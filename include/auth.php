@@ -28,20 +28,34 @@ if (!isset($_SESSION['user_id']))
 		print 'Could not run query: ' . $q;
 		exit;
 	}
-	if (mysqli_num_rows($res) > 1) //check and make sure only one result is returned
+	if (mysqli_num_rows($res) == 0) //check and make user is setup - Mainly for LDAP and other authenication not using the Quiz user database for authenication.
 	{
-		print "Error duplicate user name";
+		$auth=  "Error user name: {$_SESSION['user_name']} not setup.";
+		
+	}
+	elseif (mysqli_num_rows($res) > 1) //check and make sure only one result is returned
+	{
+		$auth= "Error duplicate user name";
+		
+	}
+	
+	if (isset($auth))
+	{	//kill session 
+		session_start();
+		session_unset();
+		session_destroy();
+		
+		include 'include/login.php';	//send to login form
 		exit;
 	}
-	else
-	{
+
 		$row = mysqli_fetch_assoc($res);
 		//Set user's rights
 		$_SESSION['user_id'] = $row['id'];
 		$_SESSION['creator'] = $row['creator'];
 		$_SESSION['admin'] = $row['admin'];
 		$_SESSION['display_name'] = $row['display_name'];
-	}
+	
 }
 	if($link) //close connection if it exists
 	{

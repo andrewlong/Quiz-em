@@ -12,15 +12,24 @@ if (!isset($_POST['search']))
 	{
 		$return = process_post_data($table, $_POST['input']);
 		process_staff_type_data('user_staff_type',$_POST['type'],$return['id'],'user_id');
-		print alert('sucess',$return['msg']);
+		print alert('success',$return['msg']);
 	}
 print "<form class='form-horizontal' method='post' action='" . get_page_url() . "?page={$_GET['page']}'>\n";
 
 $data= get_data($table);
 
-text_input('input[user_name]',$data['user_name'],'text',4);
+if ($use_ldap)
+{
+	$ldap_extra = "><span class='help-block'>User name must match Active Directory (Windows) user name</span";
+}
+text_input('input[user_name]',$data['user_name'],'text',4,$ldap_extra);
+?> 
+<?php 
 text_input('input[display_name]',$data['display_name'],'text',4);
+if (!$use_ldap)
+{
 text_input('input[password]',$data['password'],'text',4);
+}
 $yes_no = array(
 				array('N','No'),
 				array('Y','Yes')
@@ -160,4 +169,3 @@ else
 ?>
 	</div>
 </div> <!-- /container -->
-   
