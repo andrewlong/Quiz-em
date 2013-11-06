@@ -1,9 +1,15 @@
 Quiz-em
 ================================
 
-Quiz-em is an quiz application licensed under the [GPL license] [4]. It is designed for use in organizations that push out education to users on a regular basis or have annual competencies, ie hospitals.
+Quiz-em is an quiz application licensed under the [GPL license] [4]. It is designed for use in organizations that push out education to users on a regular basis or have annual competencies, ie hospitals.  Supports LDAP (Active Directory) or MySQL authentication built in, also can support other authenication methods (read comments in include/auth.php).
 
 I wrote this in procedural style (learned php back in 2002 prior to php5) but am in the process of converting to object orientated.
+
+Live Demo
+-------------------
+[Click here for live demo.] [8]
+
+
 
 User Access
 -------------------
@@ -32,7 +38,7 @@ In the functions.php change the MySQL info in the `db_connect()` function to you
 
 See [MySQL-PHP-Functions.md] [6] for a little more detail on how the functions handle posted data arrays to generate SQL statements dynamically.
 
-More documentation to come in my spare time, including a live demo.
+More documentation to come in my spare time.
 -------------------
 
 
@@ -57,3 +63,4 @@ Written using [php] [1], [MySQL] [2], [JQuery] [3] and [Bootstrap] [7]
   [5]: https://github.com/blueimp/jQuery-File-Upload 
   [6]: https://github.com/andrewlong/Quiz-em/blob/master/MySQL-PHP-Functions.md
   [7]: http://getbootstrap.com/
+  [8]: http://quiz.andrewlong.pw/
