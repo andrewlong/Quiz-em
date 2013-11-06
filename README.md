@@ -3,7 +3,7 @@ Quiz-em
 
 Quiz-em is an quiz application licensed under the [GPL license] [4]. It is designed for use in organizations that push out education to users on a regular basis or have annual competencies, ie hospitals.
 
-I write this in my spare time and don't consider myself to be a programmer to please excuse any bad practices, but please do improve the code or tell me if I'm doing something wrong.
+I wrote this in procedural style (learned php back in 2002 prior to php5) but am in the process of converting to object orientated.
 
 User Access
 -------------------
