@@ -19,6 +19,19 @@ Allows for three levels of access
 * Creator: Above plus, access to create quizes, modify own quizes, and check for completion of owned quizes.
 * Admin: Full access, add/modify/search users, quizes, staff types; check for completion of any quizes; change quiz ownership.
 
+
+Install 
+-----------------
+
+Required Programs
+apache (currently doesn't play nice with IIS)
+MySQL
+php
+
+Copy files with git or download the [latest version.] [9]
+
+then complete SQL Setup below and edit functions.php as per below.
+
 SQL Setup
 -------------------
 
@@ -64,3 +77,4 @@ Written using [php] [1], [MySQL] [2], [JQuery] [3] and [Bootstrap] [7]
   [6]: https://github.com/andrewlong/Quiz-em/blob/master/MySQL-PHP-Functions.md
   [7]: http://getbootstrap.com/
   [8]: http://quiz.andrewlong.pw/
+  [9]: https://github.com/andrewlong/Quiz-em/releases
